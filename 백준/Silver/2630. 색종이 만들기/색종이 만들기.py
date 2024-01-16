@@ -1,3 +1,5 @@
+import sys
+
 global zeroCnt
 zeroCnt = 0
 global oneCnt
