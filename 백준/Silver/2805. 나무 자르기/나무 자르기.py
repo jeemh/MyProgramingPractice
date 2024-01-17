@@ -1,5 +1,4 @@
 import sys
-sys.setrecursionlimit(10**8)
 
 def sumOfCutTree(tree,standard):
     sum = 0
