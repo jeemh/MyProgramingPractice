@@ -12,7 +12,7 @@ def sumOfCutTree(tree,standard):
 def binarySearch(tree, key, start, mid, end):
     if sumOfCutTree(tree,mid) == key or start > end:
         print(mid)
-        return
+        exit()
     
     elif sumOfCutTree(tree,mid) > key:
         start = mid + 1
