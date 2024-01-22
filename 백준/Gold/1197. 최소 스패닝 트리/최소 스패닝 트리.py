@@ -17,6 +17,7 @@ def find_parent(x):
     if parent[x] != x:
         parent[x] = find_parent(parent[x])
     return parent[x]
+
 def union(a,b):
     ap = find_parent(a)
     bp = find_parent(b)
@@ -34,13 +35,6 @@ def kruskal():
         if find_parent(a) != find_parent(b):
             sum += c
             union(a,b)
-        
-        # if parent[dist[i][1]] > min(parent[dist[i][1]],parent[dist[i][2]]):
-        #     parent[dist[i][1]] = min(parent[dist[i][1]],parent[dist[i][2]])
-
-        # if parent[dist[i][2]] > min(parent[dist[i][1]],parent[dist[i][2]]):
-        #     parent[dist[i][2]] = min(parent[dist[i][1]],parent[dist[i][2]])
-   
     return sum
         
 print(kruskal())
