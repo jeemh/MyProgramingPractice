@@ -22,8 +22,17 @@ def bfs():
             if ans[nxt] == 0:
                 ans[nxt] = now
                 queue.append(nxt)
+def dfs():
+    stack = []
+    stack.append(1)
+    while stack:
+        now = stack.pop()
+        for nxt in graph[now]:
+            if ans[nxt] == 0:
+                ans[nxt] = now
+                stack.append(nxt)
 
-bfs()
+dfs()
 res = ans[2:]
 for x in res:
     print(x)
