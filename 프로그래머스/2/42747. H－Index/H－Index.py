@@ -8,4 +8,5 @@ def solution(citations):
                 count+=1
         if count >= h_index:
             return h_index
+        
     return 0
